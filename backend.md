@@ -138,6 +138,9 @@ class User(DjangoAbstractUser):
     bought_items = models.ManyToManyField(Item)
 
     seller = models.ForeignKey('Seller', on_delete=models.PROTECT)
+    
+class Seller(models.Model):
+    name = models.CharField(max_length=100)
 
 ```
 
